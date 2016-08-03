@@ -1,7 +1,9 @@
 package jp.movion.akira;
 
 import org.aiwolf.client.base.player.AbstractSeer;
+import org.aiwolf.client.lib.TemplateTalkFactory;
 import org.aiwolf.common.data.Agent;
+import org.aiwolf.common.data.Role;
 
 public class MovionSeer extends AbstractSeer {
 
@@ -19,8 +21,8 @@ public class MovionSeer extends AbstractSeer {
 
 	@Override
 	public String talk() {
-		// TODO 自動生成されたメソッド・スタブ
-		return null;
+		String talk = TemplateTalkFactory.comingout(getMe(),Role.SEER);
+		return talk;
 	}
 
 	@Override
